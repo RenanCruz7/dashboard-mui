@@ -1,7 +1,6 @@
 import { AppBar, Avatar, Badge, Toolbar, Typography } from "@mui/material";
 import MailIcon from "@mui/icons-material/Mail";
 import maxImage from "../../assets/max.png";
-import SettingsIcon from '@mui/icons-material/Settings';
 
 function Topbar() {
   return (
@@ -14,7 +13,6 @@ function Topbar() {
         <Badge badgeContent={4} color="primary">
           <MailIcon color="inherit" />
         </Badge>
-        <SettingsIcon sx={{ color: "white", marginLeft: 2 }} />
       </Toolbar>
     </AppBar>
   );
