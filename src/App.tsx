@@ -3,6 +3,8 @@ import { Box } from "@mui/material";
 import Topbar from "./components/TopBar/TopBar";
 import Sidebar from "./components/SideBar/SideBar";
 import Dashboard from "./components/Dashboard/Dashboard";
+import { Routes, Route } from 'react-router-dom';
+import TeamDashboard from "./components/TeamDashboard/TeamDashboard";
 
 function App() {
   return (
@@ -10,7 +12,11 @@ function App() {
       <Topbar />
       <Sidebar />
       <Box component="main" sx={{ flexGrow: 1, p: 3, mt: 8 }}>
-        <Dashboard />
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/dashboard/pilots" element={<Dashboard />} />
+          <Route path="/dashboard/teams" element={<TeamDashboard />} />
+        </Routes>
       </Box>
     </Box>
   );

@@ -3,21 +3,26 @@ import { DataGrid } from '@mui/x-data-grid';
 import type { GridColDef } from '@mui/x-data-grid';
 
 const columns: GridColDef<(typeof rows)[number]>[] = [
-  { field: 'id', headerName: 'Position', width: 100 },
+  { field: 'id', 
+    headerName: 'Position', 
+    width: 100,
+    headerAlign: 'center',
+    align: 'center',
+  },
   {
     field: 'firstName',
     headerName: 'First name',
     width: 150,
     editable: true,
-    headerAlign: 'center', // Centraliza o cabeçalho
-    align: 'center',       // Centraliza o conteúdo
+    headerAlign: 'center',
+    align: 'center',
   },
   {
     field: 'lastName',
     headerName: 'Last name',
     width: 150,
     editable: true,
-    headerAlign: 'center', // Centraliza o cabeçalho
+    headerAlign: 'center',
     align: 'center',    
   },
   {
@@ -26,7 +31,7 @@ const columns: GridColDef<(typeof rows)[number]>[] = [
     type: 'number',
     width: 110,
     editable: true,
-    headerAlign: 'center', // Centraliza o cabeçalho
+    headerAlign: 'center',
     align: 'center',    
   },
   {
@@ -35,7 +40,7 @@ const columns: GridColDef<(typeof rows)[number]>[] = [
     description: 'The number of podiums achieved',
     type: 'number',
     width: 160,
-    headerAlign: 'center', // Centraliza o cabeçalho
+    headerAlign: 'center',
     align: 'center',    
   },
   {
