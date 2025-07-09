@@ -18,12 +18,15 @@ import ExpandMore from '@mui/icons-material/ExpandMore';
 import PersonIcon from '@mui/icons-material/Person';
 import GroupsIcon from '@mui/icons-material/Groups';
 import { useState } from "react";
+import ModalConfig from "../ModalConfig/ModalConfig";
 import { useNavigate } from "react-router-dom";
 
 const drawerWidth = 240;
 
+
 function Sidebar() {
   const [open, setOpen] = useState(true);
+  const [modalOpen, setModalOpen] = useState(false);
   const navigate = useNavigate();
 
   const handleDashboardClick = () => {
@@ -38,6 +41,10 @@ function Sidebar() {
   const handleTeamDashboardClick = () => {
     navigate('/dashboard/teams');
     // Ou você pode usar um estado global ou props para mudar o dashboard mostrado
+  };
+
+  const handleConfigClick = () => {
+    setModalOpen(true);
   };
 
   return (
@@ -106,7 +113,7 @@ function Sidebar() {
         <Divider />
         <List>
           <ListItem disablePadding>
-            <ListItemButton>
+            <ListItemButton onClick={handleConfigClick}>
               <ListItemIcon>
                 <SettingsIcon />
               </ListItemIcon>
@@ -114,6 +121,7 @@ function Sidebar() {
             </ListItemButton>
           </ListItem>
         </List>
+        <ModalConfig open={modalOpen} onClose={() => setModalOpen(false)} />
       </Box>
     </Drawer>
   );
