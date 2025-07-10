@@ -10,8 +10,6 @@ import {
   Collapse
 } from "@mui/material";
 import DashboardIcon from '@mui/icons-material/Dashboard';
-import PeopleIcon from '@mui/icons-material/People';
-import BarChartIcon from '@mui/icons-material/BarChart';
 import SettingsIcon from '@mui/icons-material/Settings';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
@@ -20,6 +18,7 @@ import GroupsIcon from '@mui/icons-material/Groups';
 import { useState } from "react";
 import ModalConfig from "../ModalConfig/ModalConfig";
 import { useNavigate } from "react-router-dom";
+import { StackedLineChart } from "@mui/icons-material";
 
 const drawerWidth = 240;
 
@@ -35,12 +34,10 @@ function Sidebar() {
 
   const handlePilotDashboardClick = () => {
     navigate('/dashboard/pilots');
-    // Ou você pode usar um estado global ou props para mudar o dashboard mostrado
   };
 
   const handleTeamDashboardClick = () => {
     navigate('/dashboard/teams');
-    // Ou você pode usar um estado global ou props para mudar o dashboard mostrado
   };
 
   const handleConfigClick = () => {
@@ -91,22 +88,12 @@ function Sidebar() {
               </ListItemButton>
             </List>
           </Collapse>
-
-          {/* Outros itens do menu */}
           <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                <PeopleIcon />
+                <StackedLineChart />
               </ListItemIcon>
-              <ListItemText primary="Pilotos" />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <BarChartIcon />
-              </ListItemIcon>
-              <ListItemText primary="Estatísticas" />
+              <ListItemText primary="Pistas" />
             </ListItemButton>
           </ListItem>
         </List>
