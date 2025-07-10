@@ -5,6 +5,7 @@ import Sidebar from "./components/SideBar/SideBar";
 import Dashboard from "./components/Dashboard/Dashboard";
 import { Routes, Route } from 'react-router-dom';
 import TeamDashboard from "./components/TeamDashboard/TeamDashboard";
+import Tracks from "./components/Tracks/Tracks";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Dashboard />} />
           <Route path="/dashboard/pilots" element={<Dashboard />} />
           <Route path="/dashboard/teams" element={<TeamDashboard />} />
+          <Route path="/tracks" element={<Tracks />} />
         </Routes>
       </Box>
     </Box>

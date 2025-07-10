@@ -39,6 +39,10 @@ function Sidebar() {
   const handleTeamDashboardClick = () => {
     navigate('/dashboard/teams');
   };
+  
+  const handleTracksClick = () => {
+    navigate('/tracks');
+  };
 
   const handleConfigClick = () => {
     setModalOpen(true);
@@ -89,7 +93,7 @@ function Sidebar() {
             </List>
           </Collapse>
           <ListItem disablePadding>
-            <ListItemButton>
+            <ListItemButton onClick={handleTracksClick}>
               <ListItemIcon>
                 <StackedLineChart />
               </ListItemIcon>
